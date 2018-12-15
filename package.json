@@ -1,7 +1,7 @@
 {
-  "name": "webpack-library-starter",
-  "version": "1.0.2",
-  "description": "Produce universal library with webpack and es6",
+  "name": "ever-post-client-library",
+  "version": "0.0.1",
+  "description": "A client library for EVER Post API",
   "main": "lib/webpack-library-starter.js",
   "scripts": {
     "build": "webpack --env dev && webpack --env build && npm run test",
