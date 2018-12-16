@@ -2,10 +2,12 @@
 // import Dog from './dog.js';
 import NavigationThumbnails from './navigation_thumbnails.js';
 
-class EverPostClient {
+window.EverPostClient = class {
   constructor(payload) {
-    NavigationThumbnails(payload.meta.navigation.thumbnails);
+    const thumbnails = new NavigationThumbnails(payload.meta.navigation.thumbnails);
+    thumbnails.applyVisibility();    
   }
 }
 
-export { EverPostClient };
+// export { EverPostClient };
+// module.exports = EverPostClient;
