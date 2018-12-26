@@ -1,4 +1,4 @@
-export default class NavigationThumbnails {
+export default class ThumbnailNavigation {
   constructor(thumbnails) {
     this.slugs = thumbnails.map((thumbnail) => {
       return (thumbnail.slug);
