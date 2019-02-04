@@ -1,7 +1,9 @@
 export default class RewardNavigation {
-  constructor(show_reward) {
+  constructor(show_reward, effective_reward_url) {
     this.showReward = show_reward;
+    this.effectiveRewardUrl = effective_reward_url;
     this.applyVisibility();
+    this.applyHrefValue();
   }
 
   applyVisibility() {
@@ -18,6 +20,12 @@ export default class RewardNavigation {
       } else {
         dom.style.display = 'inline-block';
       }
+    });
+  }
+
+  applyHrefValue() {
+    document.querySelectorAll('a.ever-reward').forEach((dom) => {
+      dom.href = this.effectiveRewardUrl;
     });
   }
 }
